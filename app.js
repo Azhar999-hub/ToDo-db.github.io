@@ -46,7 +46,16 @@ function renderList (){
 }
 
 window.add= function(){
-   
+    var inp =  document.getElementById("inp");
+    var reference = ref(databs, 'inps/' );
+    var newRef = push(reference)
+    set(newRef, {
+        text: inp.value,
+        time: new Date().getHours()+":"+new Date().getMinutes(),
+        id: newRef.key,
+
+    });
+
 
 
     var obj ={
